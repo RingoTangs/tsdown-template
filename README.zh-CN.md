@@ -1,7 +1,7 @@
 # tsdown-template
 
 <p align="center">
-  <strong>一个基于 `tsdown` 的精简 TypeScript 库模板。</strong>
+  <strong>一个基于 tsdown 的精简 TypeScript 库模板。</strong>
 </p>
 
 <p align="center">

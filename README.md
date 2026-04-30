@@ -1,7 +1,7 @@
 # tsdown-template
 
 <p align="center">
-  <strong>A minimal TypeScript library template powered by `tsdown`.</strong>
+  <strong>A minimal TypeScript library template powered by tsdown.</strong>
 </p>
 
 <p align="center">
