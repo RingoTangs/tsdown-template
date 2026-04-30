@@ -1,15 +1,22 @@
 # tsdown-template
 
-A minimal TypeScript library template powered by `tsdown`.
-
-<p>
-  <img
-    src="https://skillicons.dev/icons?i=ts,nodejs,pnpm,vite,vitest,eslint,prettier"
-    alt="TypeScript, Node.js, pnpm, tsdown ecosystem, Vitest, ESLint, Prettier"
-  />
+<p align="center">
+  <strong>A minimal TypeScript library template powered by `tsdown`.</strong>
 </p>
 
-Build TypeScript libraries with `tsdown`, dual ESM/CJS output, Vitest, ESLint, and Prettier.
+<p align="center">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white">
+  <img alt="pnpm" src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white">
+  <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0F172A?style=for-the-badge&logo=vite&logoColor=white">
+  <img alt="Vitest" src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white">
+  <img alt="ESLint" src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white">
+  <img alt="Prettier" src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=1A2B34">
+</p>
+
+<p align="center">
+  Build TypeScript libraries with dual ESM/CJS output, typed declarations, and a ready-to-use quality toolchain.
+</p>
 
 English | [简体中文](./README.zh-CN.md)
 
