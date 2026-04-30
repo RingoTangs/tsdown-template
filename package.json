@@ -1,0 +1,46 @@
+{
+  "name": "tsdown-template",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc -b",
+    "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test:run",
+    "check:fix": "pnpm lint:fix && pnpm format",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "6.2.0",
+    "@prettier/plugin-xml": "^3.4.2",
+    "@types/node": "^22.19.17",
+    "eslint": "9.39.1",
+    "eslint-config-prettier": "10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "tsdown": "^0.21.10",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,jsonc,json5,css,scss,sass,less,pcss,postcss,html,htm,md,mdx,yml,yaml,svg,xml}": [
+      "prettier --write"
+    ]
+  }
+}
