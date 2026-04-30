@@ -46,11 +46,13 @@
   },
   "scripts": {
     "build": "tsdown",
+    "build:publish": "BUILD_TARGET=publish tsdown && node -e \"const { readdirSync, rmSync } = require('node:fs'); for (const file of readdirSync('dist')) if (file.endsWith('.map')) rmSync('dist/' + file)\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "typecheck": "tsc -b",
+    "prepublishOnly": "pnpm build:publish",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test:run",
     "check:fix": "pnpm lint:fix && pnpm format",
     "test": "vitest",
