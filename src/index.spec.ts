@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 
-describe('x', () => {
-  it('y', () => {
-    expect('1').toBe('1')
+import { sum } from './index'
+
+describe('sum', () => {
+  it('adds two numbers', () => {
+    expect(sum(1, 2)).toBe(3)
   })
 })
