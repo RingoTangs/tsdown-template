@@ -18,7 +18,9 @@
   默认提供 ESM / CJS 双格式产物、类型声明生成，以及可直接使用的测试与代码质量工具链。
 </p>
 
-[English](./README.md) | 简体中文
+<p align="center">
+  English | <a href="./README.zh-CN.md">简体中文</a>
+</p>
 
 ## 环境要求
 

@@ -18,7 +18,9 @@
   Build TypeScript libraries with dual ESM/CJS output, typed declarations, and a ready-to-use quality toolchain.
 </p>
 
-English | [简体中文](./README.zh-CN.md)
+<p align="center">
+  English | <a href="./README.zh-CN.md">简体中文</a>
+</p>
 
 ## Requirements
 
