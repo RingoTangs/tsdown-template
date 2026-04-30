@@ -24,9 +24,11 @@
   "devDependencies": {
     "@antfu/eslint-config": "6.2.0",
     "@prettier/plugin-xml": "^3.4.2",
+    "@testing-library/jest-dom": "^6.9.1",
     "@types/node": "^22.19.17",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
+    "happy-dom": "^20.9.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
