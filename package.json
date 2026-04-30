@@ -5,15 +5,15 @@
   "private": true,
   "packageManager": "pnpm@10.24.0",
   "description": "A TypeScript npm library template powered by tsdown.",
-  "author": "ringo",
+  "author": "RingoTangs",
   "license": "MIT",
-  "homepage": "https://github.com/ringo/tsdown-template#readme",
+  "homepage": "https://github.com/RingoTangs/tsdown-template#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ringo/tsdown-template.git"
+    "url": "git+https://github.com/RingoTangs/tsdown-template.git"
   },
   "bugs": {
-    "url": "https://github.com/ringo/tsdown-template/issues"
+    "url": "https://github.com/RingoTangs/tsdown-template/issues"
   },
   "keywords": [
     "typescript",
