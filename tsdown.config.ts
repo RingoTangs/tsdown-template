@@ -16,4 +16,6 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   shims: true,
   target: 'es2015',
+  sourcemap: true,
+  platform: 'browser',
 })

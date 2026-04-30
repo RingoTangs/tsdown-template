@@ -2,6 +2,24 @@
   "name": "tsdown-template",
   "type": "module",
   "version": "0.0.0",
+  "description": "A TypeScript npm library template powered by tsdown.",
+  "keywords": [
+    "typescript",
+    "tsdown",
+    "npm-package",
+    "library",
+    "template"
+  ],
+  "author": "ringo",
+  "license": "MIT",
+  "homepage": "https://github.com/ringo/tsdown-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringo/tsdown-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ringo/tsdown-template/issues"
+  },
   "private": true,
   "packageManager": "pnpm@10.24.0",
   "sideEffects": false,
