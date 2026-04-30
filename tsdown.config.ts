@@ -12,6 +12,7 @@ export default defineConfig({
   },
   clean: true,
   dts: true,
+  cjsDefault: true,
   format: ['cjs', 'esm'],
   shims: true,
   target: 'es2015',
