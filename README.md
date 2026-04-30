@@ -1,10 +1,6 @@
 # tsdown-template
 
-English | [简体中文](./README.zh-CN.md)
-
 A minimal TypeScript library template powered by `tsdown`.
-
-## Tech Stack
 
 <p>
   <img
@@ -13,11 +9,9 @@ A minimal TypeScript library template powered by `tsdown`.
   />
 </p>
 
-- `TypeScript` for library authoring and declaration output
-- `tsdown` for ESM/CJS bundling
-- `Vitest` for unit testing
-- `ESLint` and `Prettier` for code quality
-- `pnpm` for dependency management
+Build TypeScript libraries with `tsdown`, dual ESM/CJS output, Vitest, ESLint, and Prettier.
+
+English | [简体中文](./README.zh-CN.md)
 
 ## Requirements
 

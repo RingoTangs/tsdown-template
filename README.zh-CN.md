@@ -1,10 +1,6 @@
 # tsdown-template
 
-[English](./README.md) | 简体中文
-
 一个基于 `tsdown` 的精简 TypeScript npm 库模板。
-
-## 技术栈
 
 <p>
   <img
@@ -13,11 +9,9 @@
   />
 </p>
 
-- `TypeScript`：编写库代码并生成类型声明
-- `tsdown`：输出 ESM / CJS 双格式产物
-- `Vitest`：执行单元测试
-- `ESLint` 与 `Prettier`：保证代码质量和格式一致
-- `pnpm`：管理依赖
+使用 `tsdown` 构建 TypeScript 库，默认提供 ESM / CJS 双格式产物，并集成 Vitest、ESLint 与 Prettier。
+
+[English](./README.md) | 简体中文
 
 ## 环境要求
 
