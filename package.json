@@ -46,7 +46,7 @@
   },
   "scripts": {
     "build": "tsdown",
-    "build:publish": "BUILD_TARGET=publish tsdown && node -e \"const { readdirSync, rmSync } = require('node:fs'); for (const file of readdirSync('dist')) if (file.endsWith('.map')) rmSync('dist/' + file)\"",
+    "build:publish": "cross-env BUILD_TARGET=publish tsdown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format:check": "prettier --check .",
