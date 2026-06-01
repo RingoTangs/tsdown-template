@@ -1,8 +1,9 @@
 import path from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'tsdown'
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname)
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const isPublishBuild = process.env.BUILD_TARGET === 'publish'
 
 export default defineConfig({

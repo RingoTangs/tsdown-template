@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%3E%3D18-5FA04E?logo=nodedotjs&logoColor=white">
   <img alt="pnpm" src="https://img.shields.io/badge/pnpm-10-F69220?logo=pnpm&logoColor=white">
   <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.21-0F172A?logo=vite&logoColor=white">
   <img alt="Vitest" src="https://img.shields.io/badge/Vitest-4-6E9F18?logo=vitest&logoColor=white">
@@ -42,6 +42,8 @@
 3. 执行 `pnpm i` 安装依赖。
 4. 开发时使用 `pnpm build`。
 5. 提交前使用 `pnpm check` 做完整校验。
+
+发布真实 npm 包前，需要删除 `package.json` 中的 `private: true`，或将其改为 `false`。
 
 发布前会通过 `prepublishOnly` 自动执行 `pnpm build:publish`。
 

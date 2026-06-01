@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%3E%3D18-5FA04E?logo=nodedotjs&logoColor=white">
   <img alt="pnpm" src="https://img.shields.io/badge/pnpm-10-F69220?logo=pnpm&logoColor=white">
   <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.21-0F172A?logo=vite&logoColor=white">
   <img alt="Vitest" src="https://img.shields.io/badge/Vitest-4-6E9F18?logo=vitest&logoColor=white">
@@ -42,6 +42,8 @@
 3. Run `pnpm i`.
 4. Use `pnpm build` during development.
 5. Verify changes with `pnpm check`.
+
+Before publishing a real npm package, remove `private: true` from `package.json` or set it to `false`.
 
 `prepublishOnly` runs `pnpm build:publish` automatically before publish.
 
