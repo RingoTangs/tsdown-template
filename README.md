@@ -33,10 +33,16 @@
 - `pnpm build` creates a local development build with sourcemaps
 - `pnpm build:watch` rebuilds the library on source changes
 - `pnpm build:publish` creates a minified publish build without sourcemaps
+- `pnpm test` starts Vitest in watch mode
+- `pnpm test:run` runs the Vitest suite once
+- `pnpm lint` runs ESLint over the repository
+- `pnpm lint:fix` applies safe ESLint fixes
 - `pnpm format` checks formatting with Prettier
 - `pnpm format:fix` formats supported files with Prettier
-- `pnpm test:run` runs the Vitest suite once
+- `pnpm typecheck` runs TypeScript project references with `tsc -b`
 - `pnpm check` runs lint, format check, typecheck, and tests
+- `pnpm check:fix` runs lint and format fixes
+- `pnpm pack:check` verifies npm package contents with a dry-run
 - `pnpm release:check` runs all release validation, including package dry-run
 
 ## Usage
@@ -56,7 +62,7 @@ Before publishing a real npm package:
 3. Run `pnpm release:check` to verify linting, formatting, types, tests, the publish build, and npm package contents.
 4. Run `npm publish` when the dry-run output looks correct.
 
-`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. The publish build is handled by `build:publish`; `prepare` only initializes Husky hooks and is not responsible for build output.
+`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. Release artifacts are produced by `build:publish`; `prepare` is only for Husky hook setup.
 
 ## Output
 

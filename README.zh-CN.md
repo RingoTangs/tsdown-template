@@ -33,10 +33,16 @@
 - `pnpm build`：生成本地开发构建，保留 sourcemap
 - `pnpm build:watch`：监听源码变化并重新构建库产物
 - `pnpm build:publish`：生成发布构建，启用压缩且不保留 sourcemap
+- `pnpm test`：启动 Vitest watch 模式
+- `pnpm test:run`：执行一次 Vitest 测试
+- `pnpm lint`：对仓库运行 ESLint
+- `pnpm lint:fix`：应用 ESLint 自动修复
 - `pnpm format`：使用 Prettier 检查格式
 - `pnpm format:fix`：使用 Prettier 格式化支持的文件
-- `pnpm test:run`：执行一次 Vitest 测试
+- `pnpm typecheck`：使用 `tsc -b` 检查 TypeScript 项目引用
 - `pnpm check`：执行 lint、格式检查、类型检查和测试
+- `pnpm check:fix`：执行 lint 和 format 自动修复
+- `pnpm pack:check`：通过 dry-run 验证 npm 包内容
 - `pnpm release:check`：执行完整发布前校验，包括打包 dry-run
 
 ## 使用方式
@@ -56,7 +62,7 @@
 3. 执行 `pnpm release:check`，验证 lint、格式、类型、测试、发布构建和 npm 包内容。
 4. 确认 dry-run 输出无误后，再执行 `npm publish`。
 
-`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布构建由 `build:publish` 负责；`prepare` 只用于初始化 Husky hooks，不负责生成构建产物。
+`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布产物由 `build:publish` 生成；`prepare` 只用于 Husky hooks 初始化。
 
 ## 输出说明
 
