@@ -8,15 +8,15 @@ Use the `@` alias for imports from `src/` when it improves readability, for exam
 
 ## Build, Test, and Development Commands
 
-Use pnpm with Node.js `>=22.0.0`.
+Use pnpm with Node.js `>=18.0.0`.
 
 - `pnpm build`: bundles `src/index.ts` to `dist/` as CJS and ESM and emits declarations.
 - `pnpm test`: starts Vitest in watch mode.
 - `pnpm test:run`: runs the Vitest suite once for CI-style checks.
 - `pnpm lint`: runs ESLint over the repository.
 - `pnpm lint:fix`: applies safe ESLint fixes.
-- `pnpm format:check`: checks formatting with Prettier.
-- `pnpm format`: formats supported files with Prettier.
+- `pnpm format`: checks formatting with Prettier.
+- `pnpm format:fix`: formats supported files with Prettier.
 - `pnpm typecheck`: runs TypeScript project references with `tsc -b`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
 

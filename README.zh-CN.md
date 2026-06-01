@@ -32,6 +32,8 @@
 - `pnpm i`：安装依赖
 - `pnpm build`：生成本地开发构建，保留 sourcemap
 - `pnpm build:publish`：生成发布构建，启用压缩且不保留 sourcemap
+- `pnpm format`：使用 Prettier 检查格式
+- `pnpm format:fix`：使用 Prettier 格式化支持的文件
 - `pnpm test:run`：执行一次 Vitest 测试
 - `pnpm check`：执行 lint、格式检查、类型检查和测试
 
