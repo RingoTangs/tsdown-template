@@ -18,7 +18,9 @@ Use pnpm with Node.js `>=18.0.0`.
 - `pnpm format`: checks formatting with Prettier.
 - `pnpm format:fix`: formats supported files with Prettier.
 - `pnpm typecheck`: runs TypeScript project references with `tsc -b`.
+- `pnpm pack:check`: verifies npm package contents with `npm pack --dry-run`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
+- `pnpm release:check`: runs full release validation before publishing.
 
 ## Coding Style & Naming Conventions
 

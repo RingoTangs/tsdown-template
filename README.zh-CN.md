@@ -36,6 +36,7 @@
 - `pnpm format:fix`：使用 Prettier 格式化支持的文件
 - `pnpm test:run`：执行一次 Vitest 测试
 - `pnpm check`：执行 lint、格式检查、类型检查和测试
+- `pnpm release:check`：执行完整发布前校验，包括打包 dry-run
 
 ## 使用方式
 
@@ -47,7 +48,7 @@
 
 发布真实 npm 包前，需要删除 `package.json` 中的 `private: true`，或将其改为 `false`。
 
-发布前会通过 `prepublishOnly` 自动执行 `pnpm build:publish`。
+发布前会通过 `prepublishOnly` 自动执行 `pnpm release:check`。
 
 ## 输出说明
 

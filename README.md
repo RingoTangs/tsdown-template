@@ -36,6 +36,7 @@
 - `pnpm format:fix` formats supported files with Prettier
 - `pnpm test:run` runs the Vitest suite once
 - `pnpm check` runs lint, format check, typecheck, and tests
+- `pnpm release:check` runs all release validation, including package dry-run
 
 ## Usage
 
@@ -47,7 +48,7 @@
 
 Before publishing a real npm package, remove `private: true` from `package.json` or set it to `false`.
 
-`prepublishOnly` runs `pnpm build:publish` automatically before publish.
+`prepublishOnly` runs `pnpm release:check` automatically before publish.
 
 ## Output
 
