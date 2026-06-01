@@ -47,9 +47,16 @@
 4. Use `pnpm build` during development.
 5. Verify changes with `pnpm check`.
 
-Before publishing a real npm package, remove `private: true` from `package.json` or set it to `false`.
+## Publishing
 
-`prepublishOnly` runs `pnpm release:check` automatically before publish.
+Before publishing a real npm package:
+
+1. Remove `private: true` from `package.json` or set it to `false`.
+2. Update `name`, `version`, `description`, `author`, `repository`, `bugs`, and `homepage`.
+3. Run `pnpm release:check` to verify linting, formatting, types, tests, the publish build, and npm package contents.
+4. Run `npm publish` when the dry-run output looks correct.
+
+`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. The publish build is handled by `build:publish`; `prepare` only initializes Husky hooks and is not responsible for build output.
 
 ## Output
 

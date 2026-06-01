@@ -47,9 +47,16 @@
 4. 开发时使用 `pnpm build`。
 5. 提交前使用 `pnpm check` 做完整校验。
 
-发布真实 npm 包前，需要删除 `package.json` 中的 `private: true`，或将其改为 `false`。
+## 发布说明
 
-发布前会通过 `prepublishOnly` 自动执行 `pnpm release:check`。
+发布真实 npm 包前：
+
+1. 删除 `package.json` 中的 `private: true`，或将其改为 `false`。
+2. 更新 `name`、`version`、`description`、`author`、`repository`、`bugs` 和 `homepage`。
+3. 执行 `pnpm release:check`，验证 lint、格式、类型、测试、发布构建和 npm 包内容。
+4. 确认 dry-run 输出无误后，再执行 `npm publish`。
+
+`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布构建由 `build:publish` 负责；`prepare` 只用于初始化 Husky hooks，不负责生成构建产物。
 
 ## 输出说明
 
