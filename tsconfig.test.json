@@ -2,11 +2,10 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.test.tsbuildinfo",
-    "useDefineForClassFields": true,
-    "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./src/*"]
     },
+    "types": ["node", "vitest"],
     "allowImportingTsExtensions": true
   },
   "include": [

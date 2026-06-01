@@ -3,7 +3,9 @@
     "target": "ES2020",
     "lib": ["ES2020"],
     "moduleDetection": "force",
+    "useDefineForClassFields": true,
     "module": "ESNext",
+    "moduleResolution": "bundler",
 
     /* Linting */
     "strict": true,
