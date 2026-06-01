@@ -14,4 +14,3 @@
 **/.env
 **/.env.*
 **/.gitignore
-routeTree.gen.ts
