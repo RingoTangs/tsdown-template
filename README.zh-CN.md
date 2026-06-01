@@ -31,6 +31,7 @@
 
 - `pnpm i`：安装依赖
 - `pnpm build`：生成本地开发构建，保留 sourcemap
+- `pnpm build:watch`：监听源码变化并重新构建库产物
 - `pnpm build:publish`：生成发布构建，启用压缩且不保留 sourcemap
 - `pnpm format`：使用 Prettier 检查格式
 - `pnpm format:fix`：使用 Prettier 格式化支持的文件

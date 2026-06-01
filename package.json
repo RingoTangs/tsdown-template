@@ -46,6 +46,7 @@
   },
   "scripts": {
     "build": "tsdown",
+    "build:watch": "tsdown --watch",
     "build:publish": "cross-env BUILD_TARGET=publish tsdown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

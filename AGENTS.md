@@ -11,6 +11,7 @@ Use the `@` alias for imports from `src/` when it improves readability, for exam
 Use pnpm with Node.js `>=18.0.0`.
 
 - `pnpm build`: bundles `src/index.ts` to `dist/` as CJS and ESM and emits declarations.
+- `pnpm build:watch`: rebuilds the library when source files change.
 - `pnpm test`: starts Vitest in watch mode.
 - `pnpm test:run`: runs the Vitest suite once for CI-style checks.
 - `pnpm lint`: runs ESLint over the repository.

@@ -31,6 +31,7 @@
 
 - `pnpm i` installs dependencies
 - `pnpm build` creates a local development build with sourcemaps
+- `pnpm build:watch` rebuilds the library on source changes
 - `pnpm build:publish` creates a minified publish build without sourcemaps
 - `pnpm format` checks formatting with Prettier
 - `pnpm format:fix` formats supported files with Prettier
