@@ -13,11 +13,10 @@ node_modules
 
 # Build outputs and generated local data
 dist
-dist-ssr
 build
-.output
-.data
 coverage
+*.tsbuildinfo
+*.tgz
 
 # Environment files
 .env
