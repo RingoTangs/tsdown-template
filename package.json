@@ -47,19 +47,19 @@
   "scripts": {
     "build": "tsdown",
     "build:watch": "tsdown --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "typecheck": "tsc -b",
-    "prepublishOnly": "pnpm release:check",
     "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm test:run",
     "fix": "pnpm lint:fix && pnpm format:fix",
     "release:build": "cross-env BUILD_TARGET=publish tsdown",
     "release:pack": "npm pack --dry-run",
     "release:check": "pnpm check && pnpm release:build && pnpm release:pack",
-    "test": "vitest",
-    "test:run": "vitest run"
+    "prepublishOnly": "pnpm release:check"
   },
   "devDependencies": {
     "@antfu/eslint-config": "6.2.0",
