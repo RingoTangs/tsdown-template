@@ -67,4 +67,4 @@
 
 ## 输出说明
 
-发布包只包含 `dist/` 中的构建产物，并同时提供 ESM 和 CJS 入口。
+发布包包含 `dist/` 中的 ESM、CJS 运行时文件及类型声明，以及 npm 元数据、README 和 LICENSE。

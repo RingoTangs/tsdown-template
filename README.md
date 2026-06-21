@@ -67,4 +67,4 @@ Before publishing a real npm package:
 
 ## Output
 
-The package publishes files from `dist/` only and exposes both ESM and CJS entry points.
+The published package includes the ESM and CJS runtime files and declarations from `dist/`, along with npm metadata, README, and LICENSE.
