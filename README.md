@@ -41,7 +41,7 @@
 - `pnpm format:fix` formats supported files with Prettier
 - `pnpm typecheck` runs TypeScript project references with `tsc -b`
 - `pnpm check` runs lint, format check, typecheck, and tests
-- `pnpm check:fix` runs lint and format fixes
+- `pnpm fix` runs lint and format fixes
 - `pnpm pack:check` verifies npm package contents with a dry-run
 - `pnpm release:check` runs all release validation, including package dry-run
 

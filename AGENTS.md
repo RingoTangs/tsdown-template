@@ -27,7 +27,7 @@ Use pnpm with Node.js `>=18.0.0`.
 
 Write ESM TypeScript. Prefer named exports from `src/index.ts` for public API additions. Use camelCase for variables/functions, PascalCase for types/classes, and kebab-case for non-code file names where practical. Keep modules focused and colocate helpers under `src/`.
 
-Formatting is handled by Prettier, while ESLint uses `@antfu/eslint-config` with TypeScript and test support. Run `pnpm check:fix` before committing routine style changes.
+Formatting is handled by Prettier, while ESLint uses `@antfu/eslint-config` with TypeScript and test support. Run `pnpm fix` before committing routine style changes.
 
 ## Testing Guidelines
 

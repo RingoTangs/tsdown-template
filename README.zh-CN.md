@@ -41,7 +41,7 @@
 - `pnpm format:fix`：使用 Prettier 格式化支持的文件
 - `pnpm typecheck`：使用 `tsc -b` 检查 TypeScript 项目引用
 - `pnpm check`：执行 lint、格式检查、类型检查和测试
-- `pnpm check:fix`：执行 lint 和 format 自动修复
+- `pnpm fix`：执行 lint 和 format 自动修复
 - `pnpm pack:check`：通过 dry-run 验证 npm 包内容
 - `pnpm release:check`：执行完整发布前校验，包括打包 dry-run
 

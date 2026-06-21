@@ -56,7 +56,7 @@
     "pack:check": "npm pack --dry-run --ignore-scripts",
     "prepublishOnly": "pnpm release:check",
     "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm test:run",
-    "check:fix": "pnpm lint:fix && pnpm format:fix",
+    "fix": "pnpm lint:fix && pnpm format:fix",
     "release:check": "pnpm check && pnpm build:publish && pnpm pack:check",
     "test": "vitest",
     "test:run": "vitest run"
