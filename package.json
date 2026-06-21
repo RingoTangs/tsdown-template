@@ -59,9 +59,7 @@
     "check:fix": "pnpm lint:fix && pnpm format:fix",
     "release:check": "pnpm check && pnpm build:publish && pnpm pack:check",
     "test": "vitest",
-    "test:run": "vitest run",
-    "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "test:run": "vitest run"
   },
   "devDependencies": {
     "@antfu/eslint-config": "6.2.0",
@@ -70,20 +68,9 @@
     "cross-env": "^10.1.0",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
     "tsdown": "^0.21.10",
     "typescript": "^5.9.3",
     "vitest": "^4.1.4"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,jsonc,json5,md,yml,yaml,svg,xml}": [
-      "prettier --write"
-    ]
   }
 }

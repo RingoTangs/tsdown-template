@@ -62,7 +62,7 @@
 3. 执行 `pnpm release:check`，验证 lint、格式、类型、测试、发布构建和 npm 包内容。
 4. 确认 dry-run 输出无误后，再执行 `npm publish`。
 
-`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布产物由 `build:publish` 生成；`prepare` 只用于 Husky hooks 初始化。
+`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布产物由 `build:publish` 生成。
 
 ## 输出说明
 

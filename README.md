@@ -62,7 +62,7 @@ Before publishing a real npm package:
 3. Run `pnpm release:check` to verify linting, formatting, types, tests, the publish build, and npm package contents.
 4. Run `npm publish` when the dry-run output looks correct.
 
-`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. Release artifacts are produced by `build:publish`; `prepare` is only for Husky hook setup.
+`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. Release artifacts are produced by `build:publish`.
 
 ## Output
 
