@@ -42,7 +42,7 @@
 - `pnpm typecheck` runs TypeScript project references with `tsc -b`
 - `pnpm check` runs lint, format check, typecheck, and tests
 - `pnpm fix` runs lint and format fixes
-- `pnpm pack:check` verifies npm package contents with a dry-run
+- `pnpm pack:check` previews the files npm will package with a dry-run
 - `pnpm release:check` runs all release validation, including package dry-run
 
 ## Usage
