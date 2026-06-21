@@ -27,12 +27,11 @@
 - Node.js `>=18`
 - pnpm `10`
 
-## Commands
+## Development
 
 - `pnpm i` installs dependencies
 - `pnpm build` creates a local development build with sourcemaps
 - `pnpm build:watch` rebuilds the library on source changes
-- `pnpm build:publish` creates a minified publish build without sourcemaps
 - `pnpm test` starts Vitest in watch mode
 - `pnpm test:run` runs the Vitest suite once
 - `pnpm lint` runs ESLint over the repository
@@ -42,8 +41,10 @@
 - `pnpm typecheck` runs TypeScript project references with `tsc -b`
 - `pnpm check` runs lint, format check, typecheck, and tests
 - `pnpm fix` runs lint and format fixes
-- `pnpm pack:check` previews the files npm will package with a dry-run
-- `pnpm release:check` runs all release validation, including package dry-run
+
+## Release Validation
+
+- `pnpm release:check` runs all release validation, including a publish build and package dry-run
 
 ## Usage
 
@@ -62,7 +63,7 @@ Before publishing a real npm package:
 3. Run `pnpm release:check` to verify linting, formatting, types, tests, the publish build, and npm package contents.
 4. Run `npm publish` when the dry-run output looks correct.
 
-`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. Release artifacts are produced by `build:publish`.
+`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. Release artifacts are produced by `release:build`.
 
 ## Output
 

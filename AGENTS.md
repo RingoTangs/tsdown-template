@@ -19,9 +19,12 @@ Use pnpm with Node.js `>=18.0.0`.
 - `pnpm format`: checks formatting with Prettier.
 - `pnpm format:fix`: formats supported files with Prettier.
 - `pnpm typecheck`: runs TypeScript project references with `tsc -b`.
-- `pnpm pack:check`: previews the files npm will package with `npm pack --dry-run`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
+- `pnpm fix`: applies ESLint and Prettier fixes.
+- `pnpm release:build`: creates the minified publish build without sourcemaps.
+- `pnpm release:pack`: previews the files npm will package with `npm pack --dry-run`.
 - `pnpm release:check`: runs full release validation before publishing.
+- `prepublishOnly`: npm lifecycle script that automatically runs `pnpm release:check` during `npm publish`.
 
 ## Coding Style & Naming Conventions
 

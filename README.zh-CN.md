@@ -27,12 +27,11 @@
 - Node.js `>=18`
 - pnpm `10`
 
-## 常用命令
+## 日常开发
 
 - `pnpm i`：安装依赖
 - `pnpm build`：生成本地开发构建，保留 sourcemap
 - `pnpm build:watch`：监听源码变化并重新构建库产物
-- `pnpm build:publish`：生成发布构建，启用压缩且不保留 sourcemap
 - `pnpm test`：启动 Vitest watch 模式
 - `pnpm test:run`：执行一次 Vitest 测试
 - `pnpm lint`：对仓库运行 ESLint
@@ -42,8 +41,10 @@
 - `pnpm typecheck`：使用 `tsc -b` 检查 TypeScript 项目引用
 - `pnpm check`：执行 lint、格式检查、类型检查和测试
 - `pnpm fix`：执行 lint 和 format 自动修复
-- `pnpm pack:check`：通过 dry-run 预览 npm 将打包的文件
-- `pnpm release:check`：执行完整发布前校验，包括打包 dry-run
+
+## 发布校验
+
+- `pnpm release:check`：执行完整发布前校验，包括发布构建和 npm 包 dry-run
 
 ## 使用方式
 
@@ -62,7 +63,7 @@
 3. 执行 `pnpm release:check`，验证 lint、格式、类型、测试、发布构建和 npm 包内容。
 4. 确认 dry-run 输出无误后，再执行 `npm publish`。
 
-`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布产物由 `build:publish` 生成。
+`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布产物由 `release:build` 生成。
 
 ## 输出说明
 
