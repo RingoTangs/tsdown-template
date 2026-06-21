@@ -31,7 +31,7 @@ Formatting is handled by Prettier, while ESLint uses `@antfu/eslint-config` with
 
 ## Testing Guidelines
 
-Vitest is the test framework. Add tests next to the code they cover or under a future `tests/` directory, using names like `*.test.ts` or `*.spec.ts`. Prefer fast unit tests for exported behavior. Run `pnpm test:run` before opening a pull request.
+Vitest is the test framework. Add tests next to the code they cover under `src/`, using names like `*.test.ts` or `*.spec.ts`; for example, `src/utils/format.test.ts`. Prefer fast unit tests for exported behavior. Run `pnpm test:run` before opening a pull request.
 
 ## Commit & Pull Request Guidelines
 
