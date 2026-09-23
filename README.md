@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-22.23.2-5FA04E?logo=nodedotjs&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%3E%3D22-5FA04E?logo=nodedotjs&logoColor=white">
   <img alt="pnpm" src="https://img.shields.io/badge/pnpm-10-F69220?logo=pnpm&logoColor=white">
   <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.23-0F172A?logo=vite&logoColor=white">
   <img alt="Vitest" src="https://img.shields.io/badge/Vitest-4-6E9F18?logo=vitest&logoColor=white">
@@ -24,14 +24,15 @@
 
 ## Requirements
 
-- Node.js `22.23.2`
+- Node.js `>=22` to run the package
+- Node.js `22.23.2` to develop this template
 - pnpm `10`
 
 ## Development
 
 - `pnpm i` installs dependencies
-- `pnpm build` creates a local development build
-- `pnpm build:watch` rebuilds the library on source changes
+- `pnpm dev` creates an unminified local development build
+- `pnpm build` creates a minified production build
 - `pnpm test` starts Vitest in watch mode
 - `pnpm test:run` runs the Vitest suite once
 - `pnpm lint` runs ESLint over the repository
@@ -41,13 +42,14 @@
 - `pnpm typecheck` runs TypeScript project references with `tsc -b`
 - `pnpm check` runs lint, format check, typecheck, and tests
 - `pnpm fix` runs lint and format fixes
+- `pnpm pack:check` previews the files npm will package
 
 ## Usage
 
 1. Create a new repository from this template.
 2. Update `package.json` metadata for your package.
 3. Run `pnpm i`.
-4. Use `pnpm build` during development.
+4. Use `pnpm dev` during development.
 5. Verify changes with `pnpm check`.
 
 ## Publishing
@@ -58,9 +60,9 @@ Before publishing a real npm package:
 2. Update `name`, `version`, `description`, `author`, `repository`, `bugs`, and `homepage`.
 3. Run `pnpm check` to verify linting, formatting, types, and tests.
 4. Run `pnpm build` to create the package artifacts.
-5. Run `npm pack --dry-run` to inspect the package contents.
+5. Run `pnpm pack:check` to inspect the package contents.
 6. Run `npm publish` when the dry-run output looks correct.
 
 ## Output
 
-The published package includes the ESM and CJS runtime files and declarations from `dist/`, along with npm metadata, README, and LICENSE. Runtime files start with a banner containing the package name and version.
+The published package includes minified ESM and CJS runtime files and declarations from `dist/`, along with npm metadata, README, and LICENSE. Runtime files start with a banner containing the package name and version.
