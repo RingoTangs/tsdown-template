@@ -63,7 +63,8 @@
     "typecheck": "tsc -b",
     "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm test:run",
     "fix": "pnpm lint:fix && pnpm format:fix",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "pnpm check && pnpm build && pnpm pack:check"
   },
   "devDependencies": {
     "@antfu/eslint-config": "8.3.0",
