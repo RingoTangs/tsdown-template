@@ -6,11 +6,11 @@
 
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%3E%3D18-5FA04E?logo=nodedotjs&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-22.23.2-5FA04E?logo=nodedotjs&logoColor=white">
   <img alt="pnpm" src="https://img.shields.io/badge/pnpm-10-F69220?logo=pnpm&logoColor=white">
-  <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.21-0F172A?logo=vite&logoColor=white">
+  <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.23-0F172A?logo=vite&logoColor=white">
   <img alt="Vitest" src="https://img.shields.io/badge/Vitest-4-6E9F18?logo=vitest&logoColor=white">
-  <img alt="ESLint" src="https://img.shields.io/badge/ESLint-9-4B32C3?logo=eslint&logoColor=white">
+  <img alt="ESLint" src="https://img.shields.io/badge/ESLint-10-4B32C3?logo=eslint&logoColor=white">
   <img alt="Prettier" src="https://img.shields.io/badge/Prettier-3-F7B93E?logo=prettier&logoColor=1A2B34">
 </p>
 
@@ -24,13 +24,13 @@
 
 ## 环境要求
 
-- Node.js `>=18`
+- Node.js `22.23.2`
 - pnpm `10`
 
 ## 日常开发
 
 - `pnpm i`：安装依赖
-- `pnpm build`：生成本地开发构建，保留 sourcemap
+- `pnpm build`：生成本地开发构建
 - `pnpm build:watch`：监听源码变化并重新构建库产物
 - `pnpm test`：启动 Vitest watch 模式
 - `pnpm test:run`：执行一次 Vitest 测试
@@ -41,10 +41,6 @@
 - `pnpm typecheck`：使用 `tsc -b` 检查 TypeScript 项目引用
 - `pnpm check`：执行 lint、格式检查、类型检查和测试
 - `pnpm fix`：执行 lint 和 format 自动修复
-
-## 发布校验
-
-- `pnpm release:check`：执行完整发布前校验，包括发布构建和 npm 包 dry-run
 
 ## 使用方式
 
@@ -60,11 +56,11 @@
 
 1. 删除 `package.json` 中的 `private: true`，或将其改为 `false`。
 2. 更新 `name`、`version`、`description`、`author`、`repository`、`bugs` 和 `homepage`。
-3. 执行 `pnpm release:check`，验证 lint、格式、类型、测试、发布构建和 npm 包内容。
-4. 确认 dry-run 输出无误后，再执行 `npm publish`。
-
-`npm publish` 会自动触发 `prepublishOnly`，从而执行 `pnpm release:check`。发布产物由 `release:build` 生成。
+3. 执行 `pnpm check`，验证 lint、格式、类型和测试。
+4. 执行 `pnpm build`，生成待发布的包产物。
+5. 执行 `npm pack --dry-run`，检查 npm 包内容。
+6. 确认 dry-run 输出无误后，再执行 `npm publish`。
 
 ## 输出说明
 
-发布包包含 `dist/` 中的 ESM、CJS 运行时文件及类型声明，以及 npm 元数据、README 和 LICENSE。
+发布包包含 `dist/` 中的 ESM、CJS 运行时文件及类型声明，以及 npm 元数据、README 和 LICENSE。运行时文件的开头包含由包名和版本号组成的 banner。

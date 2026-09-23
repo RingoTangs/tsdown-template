@@ -6,11 +6,11 @@
 
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%3E%3D18-5FA04E?logo=nodedotjs&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-22.23.2-5FA04E?logo=nodedotjs&logoColor=white">
   <img alt="pnpm" src="https://img.shields.io/badge/pnpm-10-F69220?logo=pnpm&logoColor=white">
-  <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.21-0F172A?logo=vite&logoColor=white">
+  <img alt="tsdown" src="https://img.shields.io/badge/tsdown-0.23-0F172A?logo=vite&logoColor=white">
   <img alt="Vitest" src="https://img.shields.io/badge/Vitest-4-6E9F18?logo=vitest&logoColor=white">
-  <img alt="ESLint" src="https://img.shields.io/badge/ESLint-9-4B32C3?logo=eslint&logoColor=white">
+  <img alt="ESLint" src="https://img.shields.io/badge/ESLint-10-4B32C3?logo=eslint&logoColor=white">
   <img alt="Prettier" src="https://img.shields.io/badge/Prettier-3-F7B93E?logo=prettier&logoColor=1A2B34">
 </p>
 
@@ -24,13 +24,13 @@
 
 ## Requirements
 
-- Node.js `>=18`
+- Node.js `22.23.2`
 - pnpm `10`
 
 ## Development
 
 - `pnpm i` installs dependencies
-- `pnpm build` creates a local development build with sourcemaps
+- `pnpm build` creates a local development build
 - `pnpm build:watch` rebuilds the library on source changes
 - `pnpm test` starts Vitest in watch mode
 - `pnpm test:run` runs the Vitest suite once
@@ -41,10 +41,6 @@
 - `pnpm typecheck` runs TypeScript project references with `tsc -b`
 - `pnpm check` runs lint, format check, typecheck, and tests
 - `pnpm fix` runs lint and format fixes
-
-## Release Validation
-
-- `pnpm release:check` runs all release validation, including a publish build and package dry-run
 
 ## Usage
 
@@ -60,11 +56,11 @@ Before publishing a real npm package:
 
 1. Remove `private: true` from `package.json` or set it to `false`.
 2. Update `name`, `version`, `description`, `author`, `repository`, `bugs`, and `homepage`.
-3. Run `pnpm release:check` to verify linting, formatting, types, tests, the publish build, and npm package contents.
-4. Run `npm publish` when the dry-run output looks correct.
-
-`npm publish` automatically runs `prepublishOnly`, which executes `pnpm release:check`. Release artifacts are produced by `release:build`.
+3. Run `pnpm check` to verify linting, formatting, types, and tests.
+4. Run `pnpm build` to create the package artifacts.
+5. Run `npm pack --dry-run` to inspect the package contents.
+6. Run `npm publish` when the dry-run output looks correct.
 
 ## Output
 
-The published package includes the ESM and CJS runtime files and declarations from `dist/`, along with npm metadata, README, and LICENSE.
+The published package includes the ESM and CJS runtime files and declarations from `dist/`, along with npm metadata, README, and LICENSE. Runtime files start with a banner containing the package name and version.

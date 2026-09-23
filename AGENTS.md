@@ -2,13 +2,13 @@
 
 ## Project Structure & Module Organization
 
-This is a small TypeScript package template built with `tsdown`. Source code lives in `src/`, with the public entry point at `src/index.ts`. Shared or ambient declarations can live in `types/`. The build writes generated output to `dist/`; do not edit generated files directly. TypeScript configuration is split across `tsconfig*.json`, with `tsconfig.build.json` used by `tsdown` and `tsconfig.test.json` reserved for tests. Build and lint config are in `tsdown.config.ts` and `eslint.config.mjs`.
+This is a small TypeScript package template built with `tsdown`. Source code lives in `src/`, with the public entry point at `src/index.ts`. Shared or ambient declarations can live in `types/`. The build writes generated output to `dist/`; do not edit generated files directly. TypeScript configuration is split across `tsconfig*.json`, with `tsconfig.build.json` used by `tsdown` and covering co-located test files under `src/`. Build and lint config are in `tsdown.config.ts` and `eslint.config.mjs`.
 
 Use the `@` alias for imports from `src/` when it improves readability, for example `@/utils`.
 
 ## Build, Test, and Development Commands
 
-Use pnpm with Node.js `>=18.0.0`.
+Use pnpm with Node.js `22.23.2`.
 
 - `pnpm build`: bundles `src/index.ts` to `dist/` as CJS and ESM and emits declarations.
 - `pnpm build:watch`: rebuilds the library when source files change.
@@ -21,10 +21,6 @@ Use pnpm with Node.js `>=18.0.0`.
 - `pnpm typecheck`: runs TypeScript project references with `tsc -b`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
 - `pnpm fix`: applies ESLint and Prettier fixes.
-- `pnpm release:build`: creates the minified publish build without sourcemaps.
-- `pnpm release:pack`: previews the files npm will package with `npm pack --dry-run`.
-- `pnpm release:check`: runs full release validation before publishing.
-- `prepublishOnly`: npm lifecycle script that automatically runs `pnpm release:check` during `npm publish`.
 
 ## Coding Style & Naming Conventions
 
