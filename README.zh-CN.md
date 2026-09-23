@@ -63,6 +63,8 @@
 5. 执行 `pnpm pack:check`，检查 npm 包内容。
 6. 确认 dry-run 输出无误后，再执行 `npm publish`。
 
+第 3～5 步用于发布前主动检查。`npm publish` 会通过 `prepublishOnly` 生命周期脚本自动重复执行这些检查，依次运行 `pnpm check`、`pnpm build` 和 `pnpm pack:check`。
+
 ## 输出说明
 
 发布包包含 `dist/` 中经过压缩的 ESM、CJS 运行时文件及类型声明，以及 npm 元数据、README 和 LICENSE。运行时文件的开头包含由包名和版本号组成的 banner。

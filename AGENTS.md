@@ -22,6 +22,7 @@ Use pnpm with Node.js `22.23.2`. Generated packages support Node.js `>=22`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
 - `pnpm fix`: applies ESLint and Prettier fixes.
 - `pnpm pack:check`: previews the files npm will package with `npm pack --dry-run`.
+- `prepublishOnly`: npm lifecycle script that automatically runs `pnpm check`, `pnpm build`, and `pnpm pack:check` before `npm publish`; do not invoke it directly.
 
 ## Coding Style & Naming Conventions
 

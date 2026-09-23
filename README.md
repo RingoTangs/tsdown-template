@@ -63,6 +63,8 @@ Before publishing a real npm package:
 5. Run `pnpm pack:check` to inspect the package contents.
 6. Run `npm publish` when the dry-run output looks correct.
 
+Steps 3–5 provide an explicit preflight check. `npm publish` automatically repeats them through the `prepublishOnly` lifecycle script, running `pnpm check`, `pnpm build`, and `pnpm pack:check` in that order.
+
 ## Output
 
 The published package includes minified ESM and CJS runtime files and declarations from `dist/`, along with npm metadata, README, and LICENSE. Runtime files start with a banner containing the package name and version.
