@@ -8,10 +8,10 @@ Use the `@` alias for imports from `src/` when it improves readability, for exam
 
 ## Build, Test, and Development Commands
 
-Use pnpm with Node.js `22.23.2`.
+Use pnpm with Node.js `22.23.2`. Generated packages support Node.js `>=22`.
 
-- `pnpm build`: bundles `src/index.ts` to `dist/` as CJS and ESM and emits declarations.
-- `pnpm build:watch`: rebuilds the library when source files change.
+- `pnpm dev`: creates unminified CJS and ESM development bundles and declarations in `dist/`.
+- `pnpm build`: creates minified CJS and ESM production bundles and declarations in `dist/`.
 - `pnpm test`: starts Vitest in watch mode.
 - `pnpm test:run`: runs the Vitest suite once for CI-style checks.
 - `pnpm lint`: runs ESLint over the repository.
@@ -21,6 +21,7 @@ Use pnpm with Node.js `22.23.2`.
 - `pnpm typecheck`: runs TypeScript project references with `tsc -b`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
 - `pnpm fix`: applies ESLint and Prettier fixes.
+- `pnpm pack:check`: previews the files npm will package with `npm pack --dry-run`.
 
 ## Coding Style & Naming Conventions
 
