@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* 缓存上次检查结果，加快后续检查。 */
     "incremental": true,
-    /* 以 ES2020 作为语言目标；运行环境兼容范围还需由 tsdown 构建配置决定。 */
+    /* 以 ES2020 作为 TypeScript 检查目标；tsdown 根据 package.json 的 engines.node 推断打包目标。 */
     "target": "ES2020",
     /* 提供 ES2020 标准 API 的类型提示，不会给运行环境补齐这些 API。 */
     "lib": ["ES2020"],
