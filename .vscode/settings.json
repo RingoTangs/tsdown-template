@@ -15,11 +15,20 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
+    "html",
     "markdown",
     "json",
     "jsonc",
     "yaml",
-    "xml"
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
   ],
 
   "files.encoding": "utf8",
