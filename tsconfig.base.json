@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* 缓存上次检查结果，加快后续检查。 */
     "incremental": true,
-    /* 以 ES2020 作为语言目标；浏览器兼容范围还需由 Vite 构建配置决定。 */
+    /* 以 ES2020 作为语言目标；运行环境兼容范围还需由 tsdown 构建配置决定。 */
     "target": "ES2020",
     /* 提供 ES2020 标准 API 的类型提示，不会给运行环境补齐这些 API。 */
     "lib": ["ES2020"],
@@ -14,7 +14,7 @@
      * 而不是按 this.name = '小明' 的方式赋值，避免意外触发父类 setter。
      */
     "useDefineForClassFields": true,
-    /* 使用现代 ES 模块语法，由 Vite 处理模块打包。 */
+    /* 使用现代 ES 模块语法，由 tsdown 处理模块打包。 */
     "module": "ESNext",
 
     /* 按打包工具的方式查找模块，支持省略导入路径中的文件扩展名。 */
@@ -28,7 +28,7 @@
     "noUnusedLocals": true,
     /* 提示未使用的函数参数；以 _ 开头的参数可以保留。 */
     "noUnusedParameters": true,
-    /* 只检查类型，不输出 JavaScript 或声明文件；实际打包交给 Vite。 */
+    /* 只检查类型，不输出 JavaScript 或声明文件；实际打包交给 tsdown。 */
     "noEmit": true,
     /*
      * 让 TypeScript 不再猜测和改写 import/export —— 写了 type 就完全擦除，没写就原样保留。
