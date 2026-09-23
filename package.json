@@ -55,11 +55,7 @@
     "format:fix": "prettier --write .",
     "typecheck": "tsc -b",
     "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm test:run",
-    "fix": "pnpm lint:fix && pnpm format:fix",
-    "release:build": "cross-env BUILD_TARGET=publish tsdown",
-    "release:pack": "npm pack --dry-run",
-    "release:check": "pnpm check && pnpm release:build && pnpm release:pack",
-    "prepublishOnly": "pnpm release:check"
+    "fix": "pnpm lint:fix && pnpm format:fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "8.3.0",
