@@ -52,8 +52,8 @@
     }
   },
   "scripts": {
-    "build": "tsdown",
-    "build:watch": "tsdown --watch",
+    "dev": "tsdown",
+    "build": "cross-env NODE_ENV=production tsdown",
     "test": "vitest",
     "test:run": "vitest run",
     "lint": "eslint .",
