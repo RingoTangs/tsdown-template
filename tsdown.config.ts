@@ -13,5 +13,5 @@ export default defineConfig({
   dts: true,
   format: ['cjs', 'esm'],
   target: 'es2020',
-  banner: `// ${pkg.name}@${pkg.version}`,
+  banner: `/*! ${pkg.name} v${pkg.version} */`,
 })
