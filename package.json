@@ -62,7 +62,7 @@
     "format:fix": "prettier --write .",
     "typecheck": "tsc -b",
     "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm test:run",
-    "fix": "pnpm lint:fix && pnpm format:fix",
+    "check:fix": "pnpm lint:fix && pnpm format:fix",
     "pack:check": "npm pack --dry-run",
     "prepublishOnly": "pnpm check && pnpm build && pnpm pack:check"
   },
