@@ -20,7 +20,7 @@ Use pnpm with Node.js `22.23.2`. Generated packages support Node.js `>=22`.
 - `pnpm format:fix`: formats supported files with Prettier.
 - `pnpm typecheck`: runs TypeScript project references with `tsc -b`.
 - `pnpm check`: runs lint, format check, typecheck, and tests.
-- `pnpm fix`: applies ESLint and Prettier fixes.
+- `pnpm check:fix`: applies ESLint and Prettier fixes.
 - `pnpm pack:check`: previews the files npm will package with `npm pack --dry-run`.
 - `prepublishOnly`: npm lifecycle script that automatically runs `pnpm check`, `pnpm build`, and `pnpm pack:check` before `npm publish`; do not invoke it directly.
 
@@ -28,7 +28,7 @@ Use pnpm with Node.js `22.23.2`. Generated packages support Node.js `>=22`.
 
 Write ESM TypeScript. Prefer named exports from `src/index.ts` for public API additions. Use camelCase for variables/functions, PascalCase for types/classes, and kebab-case for non-code file names where practical. Keep modules focused and colocate helpers under `src/`.
 
-Formatting is handled by Prettier, while ESLint uses `@antfu/eslint-config` with TypeScript and test support. Run `pnpm fix` before committing routine style changes.
+Formatting is handled by Prettier, while ESLint uses `@antfu/eslint-config` with TypeScript and test support. Run `pnpm check:fix` before committing routine style changes.
 
 ## Testing Guidelines
 
