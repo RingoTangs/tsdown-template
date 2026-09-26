@@ -33,6 +33,7 @@ concurrency:
 jobs:
   # 定义一个名为 check 的 Job
   check:
+    name: Check
     # 使用 GitHub 提供的最新版 Ubuntu Runner
     runs-on: ubuntu-latest
 
