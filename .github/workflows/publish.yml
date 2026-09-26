@@ -24,6 +24,12 @@ permissions:
 jobs:
   publish:
     name: Publish
+    # 模板仓库本身禁止发布
+    # 从 GitHub Template 创建新项目后，
+    # github.repository 会变成新仓库名称，
+    # 因此发布工作流会自动启用，无需修改此文件。
+    if: github.repository != 'RingoTangs/tsdown-template'
+
     runs-on: ubuntu-latest
 
     # 防止异常情况下发布任务长时间占用 Runner
