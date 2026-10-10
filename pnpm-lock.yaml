@@ -15,8 +15,8 @@ importers:
         specifier: ^3.4.2
         version: 3.4.2(prettier@3.9.8)
       '@ringotangs/tsconfig':
-        specifier: ^0.1.2
-        version: 0.1.2(typescript@5.9.3)
+        specifier: ^0.2.0
+        version: 0.2.0(typescript@5.9.3)
       '@types/node':
         specifier: ^22.20.4
         version: 22.20.4
@@ -287,8 +287,8 @@ packages:
   '@quansync/fs@1.0.0':
     resolution: {integrity: sha512-4TJ3DFtlf1L5LDMaM6CanJ/0lckGNtJcMjQ1NAV6zDmA0tEHKZtxNKin8EgPaVX1YzljbxckyT2tJrpQKAtngQ==}
 
-  '@ringotangs/tsconfig@0.1.2':
-    resolution: {integrity: sha512-shRQp0SGJa2j+qxAlikFDUHe+lqbzg7NZ+oWt3eGVvp2yYWMvGqQ/ZyTdv61jqrNPdHdy/OZ2RB/9wOeye0fEA==}
+  '@ringotangs/tsconfig@0.2.0':
+    resolution: {integrity: sha512-TbyY/89J1PS4AtMlurY7FsjM/1c4QbSyqw/yy572BT4TcL9p2A2145A3G3GRTzi0YjT6QBaQ/QEg23lRlKClYg==}
     peerDependencies:
       typescript: '>=5.8.0'
 
@@ -2479,7 +2479,7 @@ snapshots:
     dependencies:
       quansync: 1.0.0
 
-  '@ringotangs/tsconfig@0.1.2(typescript@5.9.3)':
+  '@ringotangs/tsconfig@0.2.0(typescript@5.9.3)':
     dependencies:
       typescript: 5.9.3
 
