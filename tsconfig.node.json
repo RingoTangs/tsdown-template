@@ -3,7 +3,17 @@
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "types": ["node"]
   },
-  "include": ["tsdown.config.ts", "vitest.config.ts"]
+  "include": [
+    "tsdown.config.ts",
+    "vitest.config.ts",
+    "test/**/*.ts",
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts"
+  ],
+  "exclude": []
 }
