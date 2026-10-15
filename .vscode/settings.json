@@ -35,10 +35,10 @@
   "files.eol": "\n",
 
   "files.readonlyInclude": {
-    "node_modules/**": true,
-    "pnpm-lock.yaml": true
+    "**/node_modules/**": true,
+    "**/pnpm-lock.yaml": true
   },
   "search.exclude": {
-    "pnpm-lock.yaml": true
+    "**/pnpm-lock.yaml": true
   }
 }
