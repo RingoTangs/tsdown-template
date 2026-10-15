@@ -11,9 +11,12 @@
   "include": [
     "tsdown.config.ts",
     "vitest.config.ts",
-    "test/**/*.{ts,tsx}",
-    "src/**/*.test.{ts,tsx}",
-    "src/**/*.spec.{ts,tsx}"
+    "test/**/*.ts",
+    "test/**/*.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx"
   ],
   "exclude": []
 }
