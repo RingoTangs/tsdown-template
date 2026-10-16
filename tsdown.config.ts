@@ -17,4 +17,12 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   banner: `/*! ${pkg.name} v${pkg.version} */`,
   minify: isProd,
+
+  // 仅在生产构建时进行 npm 包校验
+  publint: isProd,
+  attw: {
+    enabled: isProd,
+    profile: 'node16',
+    level: 'error',
+  },
 })
