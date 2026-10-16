@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.2.1",
   "private": true,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "packageManager": "pnpm@10.24.0",
   "description": "A TypeScript npm library template powered by tsdown.",
   "author": "RingoTangs",
