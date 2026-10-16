@@ -11,5 +11,6 @@ export default antfu({
   ignores: ['**/pnpm-lock.yaml'],
   rules: {
     'ts/explicit-function-return-type': 'off',
+    'react-refresh/only-export-components': 'off',
   },
 }).append(prettier)
