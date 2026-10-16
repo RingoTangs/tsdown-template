@@ -21,6 +21,13 @@ permissions:
   # 不需要在 GitHub Secrets 中保存长期 NPM_TOKEN
   id-token: write
 
+# 不同 Tag 的发布串行执行，不取消正在执行的发布
+# 最多保留 100 个等待任务，不保证按 SemVer 顺序发布
+concurrency:
+  group: npm-publish
+  cancel-in-progress: false
+  queue: max
+
 jobs:
   publish:
     name: Publish
@@ -40,9 +47,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
+          # 获取所有分支和 Tag 的完整历史，包括 origin/main 引用
+          fetch-depth: 0
+
           # 发布过程中不需要继续使用 GitHub checkout credential，
           # 因此关闭凭据持久化，减少不必要的权限暴露
           persist-credentials: false
+
+      # Checkout 后 HEAD 为 Tag 对应提交，兼容轻量 Tag 和附注 Tag
+      # 仅允许发布属于 main 分支提交历史的版本
+      - name: Verify release commit
+        shell: bash
+        run: |
+          if ! git rev-parse --verify 'refs/remotes/origin/main^{commit}' >/dev/null; then
+            echo "::error::无法找到 origin/main，终止发布"
+            exit 1
+          fi
+
+          if ! git merge-base --is-ancestor HEAD refs/remotes/origin/main; then
+            echo "::error::发布 Tag 对应提交不属于 origin/main 的提交历史，终止发布"
+            exit 1
+          fi
 
       # 安装 pnpm
       #
@@ -156,7 +181,10 @@ jobs:
       # pnpm check
       #   - lint
       #   - format check
-      #   - TypeScript consumer typecheck
+      #   - TypeScript typecheck
+      #   - tests
+      # pnpm build
+      #   - 生产构建及包校验
       # pnpm pack:check
       #   - npm pack --dry-run
       #
